@@ -14,8 +14,6 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-
-    console.log(req.body.data); 
     const result = await parse(req.body.data);
     // console.log('RESULT=', result.length);
     res.status(200).json(result);
